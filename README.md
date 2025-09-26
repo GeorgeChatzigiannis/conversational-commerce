@@ -141,10 +141,44 @@ The chat service handles communication with the Convai API:
 
 The project includes comprehensive test coverage using Vitest and Vue Test Utils.
 
-Run tests:
+### Running Tests
+
 ```bash
+# Run all tests once
 npm run test:unit
+
+# Run tests in watch mode (for development)
+npm run test
+
+# Run tests with code coverage
+npm run test:coverage
 ```
+
+### Code Coverage
+
+Generate and view code coverage reports:
+
+```bash
+npm run test:coverage
+```
+
+This command will:
+- Run all unit tests
+- Generate a coverage report in the terminal
+- Create a detailed HTML report in `coverage/index.html`
+
+Open `coverage/index.html` in your browser to view:
+- Line-by-line coverage for each file
+- Coverage percentages for statements, branches, functions, and lines
+- Uncovered code highlighted in red
+
+Current test coverage includes:
+- ✅ All Vue components
+- ✅ API services and error handling
+- ✅ Pinia store actions and getters
+- ✅ Stream parsing and processing utilities
+- ✅ Markdown processing
+- ✅ Chat response composables
 
 ## Deployment
 
