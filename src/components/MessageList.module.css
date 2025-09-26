@@ -8,7 +8,7 @@
 
 .suggestionContainer {
   text-align: center;
-  max-width: 600px;
+  max-width: 37.5rem;
   margin: var(--spacing-lg) auto;
   padding: var(--spacing-lg);
 }
@@ -22,7 +22,7 @@
 
 .suggestions {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
   gap: var(--spacing-sm);
 }
 
@@ -42,7 +42,7 @@
 .suggestionButton:hover {
   background-color: var(--color-primary);
   color: var(--color-secondary);
-  transform: translateY(-2px);
+  transform: translateY(-0.125rem);
   box-shadow: var(--shadow-md);
 }
 
@@ -66,15 +66,15 @@
 .typingIndicator {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 0.25rem;
   padding: var(--spacing-sm) var(--spacing-md);
   background-color: var(--color-background);
   border-radius: var(--radius-lg);
 }
 
 .typingIndicator span {
-  width: 8px;
-  height: 8px;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
   background-color: var(--color-text-secondary);
   animation: typing 1.4s infinite;
@@ -101,7 +101,7 @@
   }
   30% {
     opacity: 1;
-    transform: translateY(-10px);
+    transform: translateY(-0.625rem);
   }
 }
 
