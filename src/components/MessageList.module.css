@@ -1,0 +1,121 @@
+.container {
+  height: 100%;
+  overflow-y: auto;
+  padding: var(--spacing-lg);
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.suggestionContainer {
+  text-align: center;
+  max-width: 600px;
+  margin: var(--spacing-lg) auto;
+  padding: var(--spacing-lg);
+}
+
+.suggestionTitle {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.suggestions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-sm);
+}
+
+.suggestionButton {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-medium);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.suggestionButton:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.suggestionButton:active {
+  transform: translateY(0);
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  min-height: 100%;
+}
+
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-md) 0;
+}
+
+.typingIndicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-background);
+  border-radius: var(--radius-lg);
+}
+
+.typingIndicator span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-text-secondary);
+  animation: typing 1.4s infinite;
+}
+
+.typingIndicator span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typingIndicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typingIndicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%,
+  60%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-md);
+  }
+
+  .suggestions {
+    grid-template-columns: 1fr;
+  }
+
+  .suggestionButton {
+    padding: var(--spacing-md);
+  }
+}

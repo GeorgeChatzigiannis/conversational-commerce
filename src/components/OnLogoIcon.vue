@@ -12,10 +12,4 @@ withDefaults(defineProps<Props>(), {
 })
 </script>
 
-<style module>
-.logo {
-  display: inline-flex;
-  vertical-align: middle;
-  object-fit: contain;
-}
-</style>
+<style module src="./OnLogoIcon.module.css"></style>

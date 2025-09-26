@@ -1,0 +1,5 @@
+.logo {
+  display: inline-flex;
+  vertical-align: middle;
+  object-fit: contain;
+}
